@@ -120,22 +120,20 @@ const popupTemplate = {
         "type": "simple",
         "symbol": {
           "type": "picture-marker",
-          "url": "https://github.com/Fatima-Bee/agol/blob/a0f1e3d79ae6f4387263e92508a0833b2dc858db/local_airport_24dp_E3E3E3.png",
+          "url": "https://github.com/Fatima-Bee/local_airport_24dp_E3E3E3.png",
           "width": "18px",
           "height": "18px"
         }
       }
 
-      const airportlayer = new FeatureLayer({
-  url: "https://services.arcgis.com/HRPe58bUyBqyyiCt/arcgis/rest/services/US_Airports_Fatima/FeatureServer",
-  renderer: airportRenderer,
-  outFields: ["*"],
-  title: "USA US Airports",
-  popupTemplate: { title: "{NAME}" }
+  const airports = new FeatureLayer({
+    url: "https://services.arcgis.com/HRPe58bUyBqyyiCt/ArcGIS/rest/services/US_Airports_Fatima/FeatureServer/0",
+    outFields: ["*"],
+    title: "US Airports",
+    renderer: airportRenderer,
+    popupTemplate: { title: "{NAME}", content: "{CITY}, {STATE}" }
 });
-
-  //add feature layer to map
-  map.add(airportlayer);
+  map.add(airports);
 
 
 
