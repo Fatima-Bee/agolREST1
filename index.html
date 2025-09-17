@@ -106,37 +106,12 @@ const popupTemplate = {
 
   //add feature layer
 
-  const schools = new FeatureLayer({
-  url: "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Public_School_Locations_Current/FeatureServer",
-  outFields: ["*"],
-  title: "USA Schools",
-  popupTemplate: { title: "{NAME}" }
+  const usaeduLayer = new FeatureLayer({
+  url: "https://gis.nnvl.noaa.gov/arcgis/rest/services/HINDZ/Evening_Heat_Index_in_Cities/ImageServer"
 });
 
 //add feature layer to map
-  map.add(schools);
-
-  const airportRenderer = {
-        "type": "simple",
-        "symbol": {
-          "type": "picture-marker",
-          "url": "https://fatima-bee.github.io/agol/local_airport_24dp_E3E3E3.png",
-          "width": "18px",
-          "height": "18px"
-        }
-      }
-
-      const airportlayer = new FeatureLayer({
-  url: "https://services.arcgis.com/HRPe58bUyBqyyiCt/arcgis/rest/services/US_Airports_Fatima/FeatureServer",
-  renderer: airportRenderer,
-  outFields: ["*"],
-  title: "USA US Airports",
-  popupTemplate: { title: "{NAME}" }
-});
-
-  //add feature layer to map
-  map.add(airportlayer);
-
+  map.add(usaeduLayer);
 
 
     //Basemap Gallery
