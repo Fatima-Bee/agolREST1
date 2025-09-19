@@ -1,1 +1,1 @@
-Lab 2: ESRI JS Stack - Read AGOL
+Lab 3: ESRI JS Stack - Write AGOL
