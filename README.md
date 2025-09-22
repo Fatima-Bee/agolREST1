@@ -1,1 +1,1 @@
-Lab 3: ESRI JS Stack - Write AGOL
+Lab 4: Mobile Web Maps with ArcGIS JS
